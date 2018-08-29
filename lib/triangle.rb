@@ -31,11 +31,11 @@ class Triangle
 
     check3 = if side1<1 && side2<1 && side3<1
       false
-    end 
+    end
 
     if check1 == false || check2 == false
      raise TriangleError
-    else     
+    else
       if side1 == side2 && side2 == side3
           :equilateral
         elsif side1 == side2 || side2 == side3 || side1 == side3
