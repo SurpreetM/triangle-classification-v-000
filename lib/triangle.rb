@@ -1,3 +1,4 @@
+require 'pry'
 class Triangle
 
   attr_accessor :side1, :side2, :side3
@@ -22,6 +23,7 @@ class Triangle
 
     all_sides_greater_than_zero = side1<=0 && side2<=0 && side3<=0
     all_sides_join = side1+side2>side3 || side1+side3>side2 || side2+side3>side1
+    binding.pry
 
     if all_sides_join == false || all_sides_greater_than_zero == false
      raise TriangleError
