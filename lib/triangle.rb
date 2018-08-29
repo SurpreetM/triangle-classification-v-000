@@ -26,7 +26,6 @@ class Triangle
     check2 = if side1+side2>side3 || side1+side3>side2 || side2+side3>side1
       true
     end
-    binding.pry
 
     if check1 == false || check2 == false
      raise TriangleError
