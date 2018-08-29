@@ -26,7 +26,7 @@ class Triangle
       true
     binding.pry
 
-    if all_sides_join == false || all_sides_greater_than_zero == false
+    if check1 == false || check2 == false
      raise TriangleError
    else true
    end
