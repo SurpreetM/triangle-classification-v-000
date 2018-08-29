@@ -25,12 +25,8 @@ class Triangle
       false
     end
 
-    check2 = if side1+side2>side3 || side1+side3>side2 || side2+side3>side1
+    check2 = if side1+side2>=side3 && side1+side3>=side2 && side2+side3>=side1
       true
-    end
-
-    check3 = if side1<1 && side2<1 && side3<1
-      false
     end
 
     if check1 == false || check2 == false
