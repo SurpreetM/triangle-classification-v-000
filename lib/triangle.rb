@@ -8,23 +8,26 @@ class Triangle
     @side3 = side3
   end
 
-  def kind
-    if valid_triangle? && side1 == side2 && side2 == side3
+  def kind2
+    if side1 == side2 && side2 == side3
       :equilateral
-    elsif valid_triangle? && (side1 == side2 || side2 == side3 || side1 == side3)
+    elsif side1 == side2 || side2 == side3 || side1 == side3
       :isosceles
     else
       :scalene
     end
   end
 
-  def valid_triangle?
+  def kind
+
     all_sides_greater_than_zero = side1<=0 && side2<=0 && side3<=0
     all_sides_join = side1+side2>side3 || side1+side3>side2 || side2+side3>side1
+
     if all_sides_join == false || all_sides_greater_than_zero == false
      raise TriangleError
    else true
    end
+
   end
 
 
