@@ -21,7 +21,7 @@ class Triangle
 
   def kind
 
-    check1 = side1>0 || side2>0 || side3>0
+    check1 = side1>0 && side2>0 && side3>0
 
 
 
